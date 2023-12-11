@@ -1,0 +1,34 @@
+input[type="submit"]{
+    background-image: url(images/gift-svgrepo-com.svg);
+    border: 3px;
+    height: 50px;
+    width: 50px;
+    color: transparent;
+    background-color: transparent;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    width: 75vw;
+    min-height: 50vw;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    
+}
