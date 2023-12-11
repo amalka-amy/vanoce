@@ -26,8 +26,8 @@ main{
     text-align: center;
     max-width: 100vw;
     padding: 30px;
-    background-color: #ffffff;
+    background-color: rgba(256,256,256,0.7);
     outline: 1px solid black;
-    opacity: 0.6;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
