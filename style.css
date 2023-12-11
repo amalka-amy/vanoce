@@ -13,7 +13,7 @@ body{
     justify-content: center;
     width: 100vw;
     min-height: 100vh;
-    max-width: 100vh;
+    max-height: 100vh;
     background-image: url(images/background.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
