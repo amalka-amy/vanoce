@@ -1,21 +1,22 @@
 <?php 
     session_start();
-    $_SESSION["count"] = "0";
+    $_SESSION["count"] = "-1";
 
     date_default_timezone_set('Europe/Prague');
     $actual_time = date('H:i');
     $actual_date = date('Y-m-d');
-    $christmas_date = date('Y').'-12-11';
+    $christmas_date = date('Y').'-12-24';
     $christmas_time = '18:30';
 
     if (($actual_date === $christmas_date)){
         if (($actual_time >= $christmas_time) and ($actual_time <= '23:59')){
-            $value = "Dočkal si se! Gratuluji <3";
+            $value = "Dočkal si se! Gratulujuuu <3";
+            $_SESSION["count"] = "0";
         }else{
             $value = "Tak snad to vydržíš až do večera ne?";
         }
     }else{
-        $value = "Ještě si počkej!";
+        $value = "Ještě si počkej, času dost!";
     }
     
     if (isset ($_POST["odeslano"])){
@@ -67,7 +68,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dáreček k Vánocům</title>
-    <meta http-equiv="refresh" content="60">
+    <?php if (($_SESSION["count"] < "0")): ?>
+    <meta http-equiv="refresh" content="5">
+    <?php endif; ?>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
