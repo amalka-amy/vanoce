@@ -6,11 +6,11 @@
     $actual_time = date('H:i');
     $actual_date = date('Y-m-d');
     $christmas_date = date('Y').'-12-24';
-    $christmas_time = '18:30';
+    $christmas_time = '18:00';
 
     if (($actual_date === $christmas_date)){
-        if (($actual_time >= $christmas_time) and ($actual_time <= '23:59')){
-            $value = "Dočkal si se! Gratulujuuu <3";
+        if (($actual_time <= $christmas_time)){
+            $value = "Dočkal si se! Gratulujuuu <3. Můžeš rozbalit dárek!";
             $_SESSION["count"] = "0";
         }else{
             $value = "Tak snad to vydržíš až do večera ne?";
@@ -23,7 +23,7 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
             if (($_POST["odeslano"]) == "1"){
                 $_SESSION["count"] = "1";
-                $value = "Ha, přemýšlela jsem, čím ti udělám radost...";
+                $value = "Přemýšlela jsem, čím ti udělám radost...";
             }if (($_POST["odeslano"]) == "2"){
                 $_SESSION["count"] = "2";
                 $value = "... nerada dávám obyčejný dárečky...";
