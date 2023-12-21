@@ -5,7 +5,7 @@
     date_default_timezone_set('Europe/Prague');
     $actual_time = date('H:i');
     $actual_date = date('Y-m-d');
-    $christmas_date = date('Y').'-12-21';
+    $christmas_date = date('Y').'-12-24';
     $christmas_time = '23:59';
 
     if (($actual_date === $christmas_date)){
