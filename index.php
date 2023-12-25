@@ -7,7 +7,9 @@
     $actual_date = date('Y-m-d');
     $christmas_date = date('Y').'-12-25';
     $christmas_time = '6:00';
-
+    $actual_date = $christmas_date;
+    $actual_time = $christmas_time;
+    
     if (($actual_date === $christmas_date)){
         $actual_date = $christmas_date;
         if (($actual_time != $christmas_time)){
